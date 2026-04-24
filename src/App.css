@@ -1,38 +1,85 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2 {
+  margin-bottom: 20px;
+  color: #1c1e21;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  margin-bottom: 15px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px; /* Importante para Mobile */
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  padding: 14px;
+  background-color: #1877f2;
   color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: filter 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  filter: brightness(0.9);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:active {
+  transform: scale(0.98);
+}
+
+.link-container {
+  margin-top: 15px;
+}
+
+.link-container a {
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Ajustes para Celulares Pequenos */
+@media (max-width: 480px) {
+  .wrapper {
+    background-color: white;
+    align-items: flex-start;
+    padding-top: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    box-shadow: none;
+    padding: 10px;
   }
 }
