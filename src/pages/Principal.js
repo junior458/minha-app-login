@@ -35,7 +35,7 @@ export default function Principal() {
             <p><strong>Nascimento:</strong> {userDoc.dataNasc}</p>
           </div>
         ) : <p>Carregando...</p>}
-        <button onClick={handleLogout} style={{backgroundColor: '#d32f2f'}}>Sair</button>
+        <button onClick={handleLogout} style={{backgroundColor: '#89cfde'}}>Sair</button>
       </div>
     </div>
   );
